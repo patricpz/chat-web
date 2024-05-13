@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MdChat } from "react-icons/md";
 
 export const Container = styled.div`
   height: 59px;
@@ -56,7 +55,7 @@ export const ModalBackground = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,6 +1,6 @@
 import React from "react";
 import * as C from "./styles";
-import { MdPerson, MdMoreVert, MdSearch } from "react-icons/md";
+import { MdPerson } from "react-icons/md";
 import { auth } from "../../services/firebase";
 import { ImExit } from "react-icons/im";
 

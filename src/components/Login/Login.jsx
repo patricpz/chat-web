@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { auth, provider, db } from '../../services/firebase'; // Importe GoogleAuthProvider em vez de provider
+import { auth, provider, db } from '../../services/firebase'; 
 import { signInWithPopup } from 'firebase/auth';
 import * as C from "./Style";
-import GoogleIcon from '../../assets/google.svg'; // Importe o ícone SVG
+import GoogleIcon from '../../assets/google.svg'; 
 
 
 
