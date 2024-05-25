@@ -8,6 +8,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 1px 2px #0003;
+
+  @media (max-width: 650px) {
+    padding-right: 60px; 
+  }
 `;
 
 export const Avatar = styled.img`
@@ -28,7 +32,7 @@ export const Options = styled.div`
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #FFF;
+    color: #fff;
     font-size: 16px;
     border: 1px solid transparent;
     border-radius: 15px;
@@ -50,7 +54,6 @@ export const Options = styled.div`
 
 
 export const ModalBackground = styled.div`
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -59,6 +62,7 @@ export const ModalBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
 `;
 
 export const Modal = styled.div`
@@ -113,4 +117,22 @@ export const ModalButtonError = styled.button`
   border-radius: 4px;
   cursor: pointer;
   background-color: red ;
+`;
+
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 50%; 
+  right: 20px;
+  transform: translateY(-50%); 
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+
+  @media (min-width: 651px) {
+    display: none;
+  }
 `;

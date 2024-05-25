@@ -4,11 +4,17 @@ import * as C from './styles'
 import Chat from '../Chat/Chat'
 import { auth, db } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Login from "../Login/Login";
 
 
 function Index() {
   const [user, loading] = useAuthState(auth);
   const [userChat, setUserChat] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+      setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     if (user) {
