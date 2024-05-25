@@ -6,7 +6,7 @@ import { auth, db } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 
-function SideBarHeader({ setUserChat }) {
+function SideBarHeader({ setUserChat, toggleSidebar }) { // Adicionando toggleSidebar como propriedade
   const [user] = useAuthState(auth);
   const refChat = db.collection("chats").where("users", "array-contains", user.email);
   const [chatsSnapshot] = useCollection(refChat);

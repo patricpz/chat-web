@@ -8,6 +8,11 @@ import { auth } from "../../services/firebase";
 const Message = ({ user, message }) => {
   const [userLoggedIn] = useAuthState(auth);
 
+  const date = new Date(message?.timestamp);
+  const formattedDate = date.toLocaleDateString();
+  const formattedTime = date.toLocaleTimeString();
+
+
   return (
     <C.Container>
       <C.Line className={userLoggedIn?.email === user ? "me" : ""}>
