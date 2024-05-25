@@ -13,12 +13,8 @@ function RotasApp() {
             <Routes>
                 <Route path="/" element={<Login />} />
 
-                <Route path='/chat'
-                    element={
-                        <PrivateRotas>
-                            <Index />
-                        </PrivateRotas>
-                    } />
+                <Route path='/chat' element={<Index />} />
+                  
             </Routes>
         </BrowserRouter>
     );

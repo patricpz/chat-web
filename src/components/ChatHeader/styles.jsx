@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+export const OpenButton = styled.button`
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 3;
+
+    @media (min-width: 651px) {
+        display: none;
+    }
+`;
+
 export const Container = styled.div`
   height: 59px;
   background-color: #363742;
@@ -25,9 +42,9 @@ export const UserInfo = styled.div`
     min-width: fit-content;
   }
 
-   &hover {
-    background-color: #FFF;
-   }
+  @media (max-width: 650px) {
+    margin-left: 55px;
+  }
 `;
 
 export const NameContent = styled.div`
@@ -62,5 +79,73 @@ export const Options = styled.div`
 
   svg:hover {
     color: #fff; 
+  }
+`;
+
+export const ModalBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+`;
+
+export const Modal = styled.div`
+  background-color: #363742;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+`;
+
+export const ModalTitle = styled.h3`
+  margin-bottom: 20px;
+  color: #FFF;
+  font-size: 24px;
+`;
+
+export const ModalText = styled.span`
+  display: block;
+  margin-bottom: 20px;
+  color: #bbb;
+  font-size: 18px;
+`;
+
+export const ModalButton = styled.button`
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1885ff;
+  color: #FFF;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0a5dc4;
+  }
+`;
+
+export const ModalButtonError = styled.button`
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: red;
+  color: #FFF;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #a00000;
   }
 `;
